@@ -1,0 +1,25 @@
+{
+  "name": "dsh-desktop-whale",
+  "version": "1.0.0",
+  "description": "DSH 桌面大肥鱼鲸鱼（DeepSeek大肥鱼桌宠 v1.0.0 独立桌面版）：随 DSH 自动启动/关闭的桌面鲸鱼，余额+今日已用+每轮对话消耗、拖拽/Q弹/音效/随机台词",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "desktop-pet",
+    "whale"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+# ============================================================================
+# dsh-desktop-whale —— DSH bundle patch（挂载声明）
+# 随 DSH Host 启动拉起独立桌面版鲸鱼 exe，退出时整树关闭。
+# 安装：dsh plugin --profile web add link:<本目录绝对路径>
+# ============================================================================
+
+- insert:
+    - id: dsh-desktop-whale
+      name: dsh-desktop-whale
