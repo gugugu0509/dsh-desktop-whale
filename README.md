@@ -27,14 +27,23 @@ dsh-desktop-whale/
 ## 安装
 
 ```bash
-# 1) 先把 exe 放到位（见下方「许可边界」）
-#    assets/DS.Desktop.Whale.exe
+# 1) 准备 exe（二选一，见下方「配置」）
+#    A. 放进包内：assets/DS.Desktop.Whale.exe
+#    B. 放在任意位置，并用环境变量 DSH_DESKTOP_WHALE_EXE 指向它
 
 # 2) 以本地包方式挂进 web profile（在仓库根目录执行）
 dsh plugin --profile web add link:.
 
 # 3) 重启 dsh web 生效
 ```
+
+## 配置
+
+| 环境变量 | 作用 |
+| --- | --- |
+| `DSH_DESKTOP_WHALE_EXE` | exe 的完整路径（**推荐**）。设置后不再使用包内 `assets/`；结束进程树时按该文件的镜像名匹配 |
+
+未设置时使用包内 `assets/DS.Desktop.Whale.exe`；两条路径都不存在时只记一条日志，不会报错。
 
 ## ⚠️ 许可边界（重要）
 
@@ -66,5 +75,6 @@ dsh plugin --profile web add link:.
 
 ## 说明
 
-- 本插件与上游两个项目**无代码/素材共用**，只是按镜像名拉起并回收一个由使用者提供的 exe。
-- 「DS / DeepSeek」相关名称与角色权利属于各自所有者；本项目为非官方插件。
+- 本插件与上游两个项目、以及 **DeepSeek 官方均无任何关联**，未获其授权或认可；「DS / DeepSeek」
+  相关名称与角色权利属于各自所有者。本项目为非官方插件。
+- 本插件与上游项目**无代码/素材共用**，只是按路径（可配置）拉起并回收一个由使用者提供的 exe。
